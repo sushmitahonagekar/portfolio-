@@ -76,8 +76,8 @@ Run locally by opening `index.html` in your browser.
 
 **Sushmita Honagekar**
 
-- 📧 Email: your-email@example.com
-- 💼 LinkedIn: https://linkedin.com/in/your-profile
+- 📧 Email: sushmitahonagekar@gmail.com
+- 💼 LinkedIn: https://linkedin.com/in/Sushmitahonagekar
 - 💻 GitHub: https://github.com/SushmitaHonagekar
 
 ## ⭐ Support
