@@ -43,9 +43,9 @@ It includes:
 ```
 portfolio/
 │── index.html
-│── style.css
-│── script.js
-│── assets/
+     │── style.css
+     │── script.js
+     │── assets/
 │── images/
 └── README.md
 ```
