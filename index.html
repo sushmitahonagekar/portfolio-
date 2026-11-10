@@ -512,6 +512,10 @@
             <div class="stat-label">PUC Score</div>
           </div>
           <div class="stat">
+          <div class="stat-num" data-target="8.9" data-suffix="">0</div>
+          <div class="stat-label">CGPA</div>
+        </div>
+        <div class="stat">
             <div class="stat-num" data-target="7" data-suffix="+">0+</div>
             <div class="stat-label">Projects</div>
           </div>
@@ -697,14 +701,14 @@
       const el = entry.target;
       const target = parseFloat(el.dataset.target);
       const suffix = el.dataset.suffix || '';
-      const isDecimal = el.dataset.target.includes('.');
+      const decimals = (el.dataset.target.split('.')[1] || '').length;
       const dur = 1400;
       const start = performance.now();
       function tick(now){
         const p = Math.min((now - start) / dur, 1);
         const eased = 1 - Math.pow(1 - p, 3);
         const val = target * eased;
-        el.textContent = (isDecimal ? val.toFixed(2) : Math.round(val)) + suffix;
+        el.textContent = (decimals ? val.toFixed(decimals) : Math.round(val)) + suffix;
         if(p < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
