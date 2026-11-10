@@ -404,6 +404,23 @@
     *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
     .cursor-dot, .cursor-ring{display:none;}
   }
+
+/* ---------- featured + mini projects ---------- */
+.proj-grid .proj-card:nth-child(3){grid-column:1 / -1;}
+.mini-head{margin:64px 0 18px; font-size:12px; color:var(--amber); letter-spacing:.18em;}
+.mini-list{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
+@media (max-width:760px){.mini-list{grid-template-columns:1fr;}}
+.mini-card{
+  display:flex; align-items:center; gap:14px; padding:14px 18px;
+  border:1px solid var(--line-strong); border-radius:6px; background:var(--paper);
+  transition:border-color .25s ease, transform .25s ease;
+}
+.mini-card:hover{border-color:var(--coral); transform:translateY(-2px);}
+.mini-n{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--amber);}
+.mini-body{flex:1; display:flex; flex-direction:column; gap:2px; min-width:0;}
+.mini-title{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;}
+.mini-desc{font-size:12.5px; color:var(--muted);}
+.mini-tech{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--coral); white-space:nowrap;}
 </style>
 </head>
 <body>
@@ -495,8 +512,8 @@
             <div class="stat-label">PUC Score</div>
           </div>
           <div class="stat">
-            <div class="stat-num" data-target="4" data-suffix="+">0+</div>
-            <div class="stat-label">Web Projects</div>
+            <div class="stat-num" data-target="7" data-suffix="+">0+</div>
+            <div class="stat-label">Projects</div>
           </div>
         </div>
       </div>
@@ -553,68 +570,53 @@
     <div class="proj-grid">
 
       <div class="proj-card reveal">
-        <div class="proj-top">
-          <span class="proj-sheet">SHEET — 01</span>
-          <span class="proj-tag">WEB</span>
-        </div>
-        <div class="proj-title">Responsive Landing Page</div>
-        <p class="proj-desc">A clean, fully responsive landing page built as a foundational front-end task — focused on layout structure and mobile-first styling.</p>
-        <div class="proj-stack">
-          <span class="stack-pill">HTML</span>
-          <span class="stack-pill">CSS</span>
-        </div>
-        <a href="https://github.com/sushmitahonagekar/SCT_WD_1" class="proj-link" target="_blank" rel="noopener">View Repository
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
+        <div class="proj-top"><span class="proj-sheet">FEATURED — 01</span><span class="proj-tag">LIVE APP</span></div>
+        <div class="proj-title">Baddies Mood 🌈</div>
+        <p class="proj-desc">A cute, animated productivity app with tasks, timer and stopwatch, schedule, habit streaks, notes and five themes. Has login, and installs on your phone like a real app.</p>
+        <div class="proj-stack"><span class="stack-pill">React</span><span class="stack-pill">Vite</span><span class="stack-pill">Tailwind</span><span class="stack-pill">Supabase</span><span class="stack-pill">Netlify</span></div>
+        <a href="https://baddiesmood.netlify.app" class="proj-link" target="_blank" rel="noopener">Open Live App <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
       </div>
 
       <div class="proj-card reveal">
-        <div class="proj-top">
-          <span class="proj-sheet">SHEET — 02</span>
-          <span class="proj-tag">WEB</span>
-        </div>
-        <div class="proj-title">Stopwatch ⏱</div>
-        <p class="proj-desc">A fully functional browser stopwatch with start, stop and lap controls — small in scope, but a solid exercise in JS timing and state handling.</p>
-        <div class="proj-stack">
-          <span class="stack-pill">CSS</span>
-          <span class="stack-pill">JavaScript</span>
-        </div>
-        <a href="https://github.com/sushmitahonagekar/SCT_WD_2" class="proj-link" target="_blank" rel="noopener">View Repository
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
+        <div class="proj-top"><span class="proj-sheet">FEATURED — 02</span><span class="proj-tag">WEB APP</span></div>
+        <div class="proj-title">Study Timetable 📚</div>
+        <p class="proj-desc">A simple study timetable planner to organise subjects and study hours into a clear schedule, built with plain HTML, CSS and JavaScript.</p>
+        <div class="proj-stack"><span class="stack-pill">HTML</span><span class="stack-pill">CSS</span><span class="stack-pill">JavaScript</span></div>
+        <a href="https://github.com/sushmitahonagekar/studytimetable" class="proj-link" target="_blank" rel="noopener">View Repository <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
       </div>
 
       <div class="proj-card reveal">
-        <div class="proj-top">
-          <span class="proj-sheet">SHEET — 03</span>
-          <span class="proj-tag">GAME</span>
-        </div>
-        <div class="proj-title">Tic-Tac-Toe (X0X)</div>
-        <p class="proj-desc">The classic X-O game built with vanilla JavaScript — covering win-detection logic, turn state and DOM interactivity from scratch.</p>
-        <div class="proj-stack">
-          <span class="stack-pill">JavaScript</span>
-          <span class="stack-pill">HTML</span>
-        </div>
-        <a href="https://github.com/sushmitahonagekar/SCT_WD_3" class="proj-link" target="_blank" rel="noopener">View Repository
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
+        <div class="proj-top"><span class="proj-sheet">FEATURED — 03</span><span class="proj-tag">🔒 PRIVATE REPO</span></div>
+        <div class="proj-title">StudyBuddy Planner</div>
+        <p class="proj-desc">An AI-assisted study planner concept that turns exams, deadlines and weak topics into a daily plan. The code is private, so the full idea, features and roadmap are in the PDF.</p>
+        <div class="proj-stack"><span class="stack-pill">Concept</span><span class="stack-pill">Planning</span><span class="stack-pill">Project Brief</span></div>
+        <a href="project-brief.pdf" class="proj-link" target="_blank" rel="noopener">Read Project PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
       </div>
 
-      <div class="proj-card reveal">
-        <div class="proj-top">
-          <span class="proj-sheet">SHEET — 04</span>
-          <span class="proj-tag">WEBSITE</span>
-        </div>
-        <div class="proj-title">Shreeram Center Website</div>
-        <p class="proj-desc">A website built for Shreeram Center — structured around clear information hierarchy and a straightforward, accessible layout.</p>
-        <div class="proj-stack">
-          <span class="stack-pill">HTML</span>
-        </div>
-        <a href="https://github.com/sushmitahonagekar/shreeram_center" class="proj-link" target="_blank" rel="noopener">View Repository
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div>
+    </div>
 
+    <div class="mini-head reveal"><span class="mono">// SMALL PROJECTS — BUILT FOR FUN</span></div>
+    <div class="mini-list reveal">
+      <a class="mini-card" href="https://github.com/sushmitahonagekar/SCT_WD_1" target="_blank" rel="noopener">
+        <span class="mini-n">01</span>
+        <span class="mini-body"><span class="mini-title">Responsive Landing Page</span><span class="mini-desc">Mobile-first layout practice.</span></span>
+        <span class="mini-tech">HTML · CSS</span>
+      </a>
+      <a class="mini-card" href="https://github.com/sushmitahonagekar/SCT_WD_2" target="_blank" rel="noopener">
+        <span class="mini-n">02</span>
+        <span class="mini-body"><span class="mini-title">Stopwatch ⏱</span><span class="mini-desc">Start, stop and lap controls.</span></span>
+        <span class="mini-tech">CSS · JS</span>
+      </a>
+      <a class="mini-card" href="https://github.com/sushmitahonagekar/SCT_WD_3" target="_blank" rel="noopener">
+        <span class="mini-n">03</span>
+        <span class="mini-body"><span class="mini-title">Tic-Tac-Toe (X0X)</span><span class="mini-desc">Classic game in vanilla JS.</span></span>
+        <span class="mini-tech">JS · HTML</span>
+      </a>
+      <a class="mini-card" href="https://github.com/sushmitahonagekar/shreeram_center" target="_blank" rel="noopener">
+        <span class="mini-n">04</span>
+        <span class="mini-body"><span class="mini-title">Shreeram Center Website</span><span class="mini-desc">Simple, clear info website.</span></span>
+        <span class="mini-tech">HTML</span>
+      </a>
     </div>
   </div>
 </section>
@@ -659,7 +661,6 @@
       <div class="social-row">
         <a href="https://www.linkedin.com/in/sushmita-honagekar-a40643346/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/sushmitahonagekar" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://instagram.com/sush._19_" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="foot-block">
